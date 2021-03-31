@@ -1,0 +1,284 @@
+*{
+    /* border: 1px solid red; */
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/**/
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+/**/
+header{
+    /* Définit le fond et la forme du HEADER */
+    background-image: url(./src/background0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* object-fit: contain; */
+    /**/
+    width:100%;
+    height:35vh;
+    max-height: 45vh;
+    /* Définit la méthode de gestion du contenu du HEADER */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; */
+}
+/**/
+#DivHeaderRowMenuButton{
+    justify-content: flex-end;
+}
+.fa-bars{
+    font-size: 125%;
+    color: grey;
+    padding-top: 0.25em;
+    padding-right: 0.5em;
+}
+.fa-bars:hover{
+    color:white;
+    cursor:pointer;
+}
+/**/
+/* Colonne principale, utile à centrer les contenus */
+#DivHeaderMainColumn{
+/* border: 3px solid green; */
+    display: flex;
+    flex-direction: column;
+    /**/
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2%;
+    /**/
+    height:90%;
+    /* change la couleur de TOUS les objets inclus */
+    color:white;
+}
+/**/
+#DivHeaderWelcomeMessageColumn{
+    align-items: center;
+}
+#HHeaderWelcomeMessage{
+    margin-top: -0.75em;
+}
+#PHeaderWelcomeMessage{
+    font-size: 0.55em;
+    margin-top: -0.75em;
+}
+/* DIV n'ayant pour but que d'organiser et présenter
+ les éléments contenu dans la ligne de recherche */
+#DivSearchMainRow{
+    /* border:2px solid yellow; */
+    height:27.5px;
+    width:66%;
+    /* Répartit les éléments sur la ligne, incluant des espacements */
+    justify-content: space-between;
+    /**/
+    background-color: rgb(128, 128, 128,0.65);
+}
+/* Div n'ayant pour but que de coller l'INPUT et le pseudo-BUTTON pour l'adresse */
+/* #DivSearchSubRowAddress{} */
+#InputAddress{
+    width:100%;
+    /**/
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+    /**/
+    background-color: rgba(218, 216, 216, 0.25);
+}
+#DivAddressButtonDown{
+    color:black;
+    width:1.75em;
+    /**/
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+    /* centrage de l'image dans la DIV pour simuler un bouton */
+    text-align: center;
+}
+#DivAddressButtonDown:hover{
+    background-color: #242524;
+    color:white;
+    cursor:pointer;
+}
+#IAddressButtonDown{
+    margin-top: 1.5px;
+}
+/* Les 3 INPUTs */
+.Search{
+    /* color:pink; */
+    width:20%;
+    margin:0.2rem;
+    /**/
+    background-color: rgb(255,255,255,0.5);
+    border-radius: 0.25em;
+}
+/* La DIV pseudo-bouton */
+#DivCheckinButton{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: nowrap; */
+    /**/
+    text-align: center;
+    /**/
+    /* justify-content: center;
+    align-items: stretch; */
+    /**/
+    min-width: 175px;
+    padding-left: 3%;
+    padding-right: 3%;
+    /**/
+    background-color: rgba(71, 129, 16, 0.65);
+    /**/
+}
+#DivCheckinButton:hover{
+    background-color: rgba(97, 201, 0, 1);
+    cursor:pointer;
+}
+#DivCheckinButton>p{
+    flex-shrink: 0;
+    /* POURQUOI NE SERT A RIEN ??? */
+    /* justify-self: center;
+    align-self: center; */
+    /* margin-bottom: -50%; */
+    padding-top: 1%;
+}
+/**/
+#CheckinRow{
+    margin-bottom: 2em;
+    /**/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /**/
+    width: 60%;
+    font-size: 75%;
+    /**/
+    justify-content: space-between;
+    background-color: rgb(128, 128, 128,0.65);
+    padding:5px;
+    border-radius: 0.5em;
+}
+#RowBtnCheckin{
+    background-color: rgba(99, 209, 126, 0.65);
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+/***** Colonne principale affichant les véhicules "trouvés" *****/
+.MainColumn{
+    align-items:center;
+}
+/*** Rangée des éléments d'information du résultat de la recherche ***/
+.InfoRow{
+    justify-content:space-between;
+}
+/* Bouton Bootstrap => IMMODIFIABLE !!! */
+/* .InfoRow>button{
+    size: 25%;
+} */
+
+
+
+/**********/
+.DivCardVehicleRow{
+    border-bottom: 1px solid grey;
+    /* width:100%; */
+    max-height: 10%;
+    margin-top: 25px;
+    /**/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /**/
+}
+/** Zone de texte : Description **/
+.DivCardVehicleColumn{
+    padding-bottom: 5px;
+}
+.DivCardVehicleColumn>h5{
+    font-size: 80%;
+    font-weight: bold;
+}
+.DivCardVehicleColumn>p,.DivCardVehicleColumn>a{
+    font-size: 65%;
+}
+.DivCardVehicleColumn>a{
+    color:white;
+    background-color: rgba(71, 129, 16, 0.65);
+    border-radius: 5px;
+    /**/
+    width:35%;
+    text-align: center;
+}
+.DivCardVehicleColumn>a:hover{
+    background-color: rgba(97, 201, 0, 1);
+    cursor:pointer;
+}
+
+/**/
+.DivImgVehicleRow{
+    display: flex;
+    flex-direction: row;
+    /**/
+    justify-content: space-around;
+    align-items: center;
+}
+/**/
+.DivImgNaviRow{
+    height:100%;
+    width:5%;
+    /**/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.DivImgNaviRow:hover{
+    cursor:pointer;
+}
+.ImgNext,.ImgPrevious{
+    height:15px;
+}
+.ImgVehicle{
+    max-width: 65%;
+    flex-shrink: 0;
+}
+/**/
+.DivCardVehicleColumn{
+    display:flex;
+    flex-direction: column;
+}
+
+
+
+
+/************************/
+footer{
+    margin-top: 20px;
+}
+#RowUs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#ImgAgency{
+    /* Définit le fond et la forme du HEADER */
+    background-image: url(./src/agence.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    object-fit: contain;
+    /**/
+    width:75px;
+    height:75px;
+    margin:10px;
+    margin-bottom: 25px;
+}
+#Agency{
+    font-size: 0.75em;
+}
